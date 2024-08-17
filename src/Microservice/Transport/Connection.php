@@ -23,8 +23,14 @@ final class Connection
 
     public function __destruct()
     {
-        $this->driver->close();
+        $this->driver?->close();
+
         unset($this->driver);
+    }
+
+    public function getDataSource(): DataSource
+    {
+        return $this->dataSource;
     }
 
     /**
