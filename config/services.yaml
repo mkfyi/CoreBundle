@@ -1,4 +1,4 @@
-high_minded_core.microservice_transport.connection:
-  class: HighMinded\CoreBundle\Microservice\Transport\Connection
-  arguments:
-    - '%env(HIGH_MINDED_AMQP_DSN)%'
+services:
+  HighMinded\CoreBundle\Microservice\Transport\Connection:
+    arguments:
+      $dataSourceName: '%env(HIGH_MINDED_AMQP_DSN)%'
