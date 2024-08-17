@@ -1,6 +1,7 @@
 {
   "name": "high-minded-cx/core-bundle",
   "type": "symfony-bundle",
+  "version": "1.0.0",
   "description": "",
   "autoload": {
     "psr-4": {
