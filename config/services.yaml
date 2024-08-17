@@ -1,4 +1,4 @@
 services:
   HighMinded\CoreBundle\Microservice\Transport\Connection:
     arguments:
-      $dataSourceName: '%env(default:amqp://rabbitmq:rabbitmq@rabbitmq:5672:HIGH_MINDED_AMQP_DSN)%'
+      $dataSourceName: '%env(HIGH_MINDED_AMQP_DSN)%'
