@@ -14,9 +14,11 @@ final class Connection
     private readonly DataSource $dataSource;
     private ?AMQPStreamConnection $driver = null;
 
-    public function __construct(string $dataSourceName)
+    public function __construct(?string $dataSourceName)
     {
-        $this->dataSource = DataSource::fromName($dataSourceName);
+        $this->dataSource = $dataSourceName !== null
+            ? DataSource::fromName($dataSourceName)
+            : 'amqp://rabbitmq:rabbitmq@rabbitmq:5672';
     }
 
     public function __destruct()
