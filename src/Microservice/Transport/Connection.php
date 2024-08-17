@@ -24,7 +24,6 @@ final class Connection
     public function __destruct()
     {
         $this->driver->close();
-
         unset($this->driver);
     }
 
